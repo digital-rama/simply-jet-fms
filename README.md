@@ -68,7 +68,7 @@ There should also be a way of downloading the content of the table as an Excel d
 
 ### Login view
 
-Login form to authenticate the user via their username and password.
+Login form to authenticate the user via their email and password.
 
 
 
