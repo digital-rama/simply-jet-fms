@@ -9,6 +9,7 @@ whitenoise = "*"
 requests = "*"
 django-background-tasks = "*"
 django-excel-response = "*"
+mysqlclient = "*"
 
 [dev-packages]
 autopep8 = "*"
