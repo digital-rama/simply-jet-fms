@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.contrib.auth import get_user_model
 
 
+# Testing the Custom User Models
 class UsersManagersTests(TestCase):
 
     def test_create_user(self):
