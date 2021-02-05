@@ -7,6 +7,8 @@ from .models import CustomUser
 from django.contrib.auth.admin import GroupAdmin as origGroupAdmin
 from django.contrib.auth.models import Group
 
+# Custom Base Class Created User
+
 
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
