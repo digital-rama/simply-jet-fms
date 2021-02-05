@@ -11,7 +11,7 @@ def get_md5_hash(file):
     url = 'https://api.hashify.net/hash/md5/hex'
     headers = {'Content-type': 'text/plain'}
     # file_0 = open(file, 'rb')
-    r = requests.post(url, headers=headers, data=file)
+    r = requests.post(url, headers=headers, data=file, verify=False)
     res = r.json()
     return res.get('Digest')
 
