@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+
+
+{% block title %} Results{% endblock title %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="download-data">
+            <h2>Results | Upload Group ID - {{user_group_id}}</h2>
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="submit" class="btn" value="Download in Excel">
+            </form>
+        </div>
+        <table>
+            <thead>
+                <th>#</th>
+                <th>File Title</th>
+                <th>MD Hash</th>
+                <th>File Link</th>
+            </thead>
+            <tbody>
+                {% if upload_groups_count < 1 %}
+                    <h2>There is File Upload Group Created Yet, <a href="{% url 'home' %}">Create One Now</a></h2>
+                {% else %}
+                    {% for uf in upload_files %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{uf.file_title}}</td>
+                        <td>{{uf.md5_hash}}</td>
+                        <td><a class="download" target="_" href="{{uf.get_img}}" download>Download</a></td>
+                    </tr>
+                    {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}
+    

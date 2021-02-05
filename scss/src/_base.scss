@@ -1,0 +1,83 @@
+
+// Header Styling
+header{
+    background-color: $col-600;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: .50rem;
+        padding-bottom: .50rem;
+        .brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            a {
+                font-size: 2.5rem;
+                font-weight: $weight-semi-bold;
+                color: $col-50;
+            }
+            h4{
+                color: white;
+            }
+        }
+
+        .nav-links{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            .logout{
+                background-color: lighten(tomato,  10%);
+                padding: .25rem 1rem .25rem 1rem;
+                transition: background-color ease-in-out 350ms;
+                &:hover{
+                    background-color: lighten(tomato,  1%);
+                }
+                a {
+                    text-decoration: none;
+                    font-weight: $weight-regular;
+                    color: $col-50;
+                }
+            }
+            .link{
+                a{
+                    text-decoration: none;
+                    color: $col-100;
+                }   
+            }
+        }
+    }
+}
+
+
+
+// Footer Styling
+footer {
+    background-color: $col-800;
+    height: 2.5rem;
+
+    .container {
+        height: inherit;
+
+        .bottom-content {
+            height: inherit;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            small {
+                color: $col-100;
+            }
+        }
+    }
+}
+
+
+.auth-redirect{
+    margin-top: .60rem;
+    margin-bottom: .60rem;
+    display: grid;
+    place-items: center;
+}

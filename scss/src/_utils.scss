@@ -1,0 +1,76 @@
+
+// A Reusable Content Container
+.container{
+    max-width: 1250px;
+    margin: auto;
+}
+
+// Button Component
+
+.btn{
+    padding: .50rem 1.5rem .50rem 1.5rem;
+    background-color: $col-500;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    color: $col-50;
+    cursor: pointer;
+    transition: ease-in-out 350ms;
+
+    &:hover{
+        background-color: $col-600;
+    }
+    &:active{
+        outline: none;
+    }
+    &:focus{
+        outline: none;
+        background-color: $col-600;
+    }
+}
+
+
+#message {
+    position: absolute;
+    right: 1rem;
+    bottom: 3rem;
+    padding: .50rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    h2{
+        font-size: 1rem;
+        color: white;
+        font-weight: 400;
+    }
+    a{
+        color: white;
+        background: tomato;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+
+        i {
+        
+        }
+    }
+}
+
+.danger{
+    background-color: tomato;
+}
+
+.warning{
+    background-color: rgb(207, 207, 80);
+}
+.success{
+    background-color: rgb(57, 192, 90);
+}
+
+.info{
+    background-color: rgb(41, 69, 223);
+}

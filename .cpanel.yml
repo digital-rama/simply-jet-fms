@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/itkfodcz/django/simply-jet-fms
+    - /bin/cp -R * $DEPLOYPATH

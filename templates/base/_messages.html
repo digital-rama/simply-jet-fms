@@ -1,0 +1,10 @@
+{% if messages %}
+    {% for message in messages %}
+        <!-- Alert Message -->
+        <div id="message" class="{% if message.tags %}{{ message.tags }}{% endif %}">
+            <h2 id="main-message">{{ message|safe }}</h2>
+            <a onclick="document.getElementById('message').style.display ='none'" href="#" class="w-7 h-7 "><i class="fas fa-times"></i></a>
+        </div>
+        <!-- Alert Message End -->
+    {% endfor %}
+{% endif %}

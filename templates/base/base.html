@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}| Simply-Jet</title>
+    <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+    {% block style %}{% endblock style %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="{% static 'js/main.js' %}" defer></script>
+</head>
+<body>
+    {% include 'base/_header.html' %}   
+    {% block content %}
+        
+    {% endblock content %}
+    {% include 'base/_footer.html' %}
+    
+    {% block javascript %}{% endblock javascript %}
+    {% include 'base/_messages.html' %}
+</body>
+</html>
